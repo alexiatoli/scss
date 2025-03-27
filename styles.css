@@ -1,0 +1,184 @@
+/* 1) Button Mixin with Interpolation */
+.btn-important {
+  font-size: 16px;
+  width: 100px;
+  background-color: blue;
+  color: purple;
+}
+
+/* 2) Font Size List (100% to 140%) */
+h6 {
+  font-size: 100%;
+}
+h7 {
+  font-size: 110%;
+}
+h8 {
+  font-size: 120%;
+}
+h9 {
+  font-size: 130%;
+}
+h10 {
+  font-size: 140%;
+}
+
+/* 3) Days of the Week with @each Rule */
+.day-Monday {
+  background-color: #ff5733;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
+.day-Monday:hover {
+  transform: scale(1.05);
+}
+
+.day-Tuesday {
+  background-color: #ffbd33;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
+.day-Tuesday:hover {
+  transform: scale(1.05);
+}
+
+.day-Wednesday {
+  background-color: #33ff57;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
+.day-Wednesday:hover {
+  transform: scale(1.05);
+}
+
+.day-Thursday {
+  background-color: #33c7ff;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
+.day-Thursday:hover {
+  transform: scale(1.05);
+}
+
+.day-Friday {
+  background-color: #9b33ff;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
+.day-Friday:hover {
+  transform: scale(1.05);
+}
+
+.day-Saturday {
+  background-color: #ff33d4;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
+.day-Saturday:hover {
+  transform: scale(1.05);
+}
+
+.day-Sunday {
+  background-color: #ff5733;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  text-align: center;
+}
+.day-Sunday:hover {
+  transform: scale(1.05);
+}
+
+/* 4) Font Weights using @for */
+.font1 {
+  font-weight: 100;
+}
+.font2 {
+  font-weight: 200;
+}
+.font3 {
+  font-weight: 300;
+}
+.font4 {
+  font-weight: 400;
+}
+.font5 {
+  font-weight: 500;
+}
+.font6 {
+  font-weight: 600;
+}
+.font7 {
+  font-weight: 700;
+}
+.font8 {
+  font-weight: 800;
+}
+.font9 {
+  font-weight: 900;
+}
+.font10 {
+  font-weight: 1000;
+}
+
+/* 5) Colors for Basketball Teams in March Madness using Maps */
+.team-Duke {
+  background-color: #001f5d;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.team-Kentucky {
+  background-color: #005bac;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.team-Kansas {
+  background-color: #e4002b;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.team-NorthCarolina {
+  background-color: #007a33;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+/* 6) Season Glyph based on Season using @each Rule */
+h1.Winter:after {
+  content: "❄️";
+  margin-left: 10px;
+}
+
+h2.Spring:after {
+  content: "🌸";
+  margin-left: 10px;
+}
+
+h3.Summer:after {
+  content: "☀️";
+  margin-left: 10px;
+}
+
+h4.Fall:after {
+  content: "🍂";
+  margin-left: 10px;
+}
