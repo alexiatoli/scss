@@ -1,100 +1,189 @@
-// 1) Button Mixin with Interpolation
-// This mixin generates a button with passed parameters for font size, width, background color, and name.
-// It uses interpolation to generate the class name dynamically based on the passed "name" parameter.
-@mixin btn($font-size, $width, $bg-color, $name) {
-  font-size: $font-size;
-  width: $width;
-  background-color: $bg-color;
-  color: purple;
-}
+$color_1: purple;
+$color_2: white;
+$background-color_1: blue;
+$background-color_2: #ff5733;
+$background-color_3: #ffbd33;
+$background-color_4: #33ff57;
+$background-color_5: #33c7ff;
+$background-color_6: #9b33ff;
+$background-color_7: #ff33d4;
+$background-color_8: #001f5d;
+$background-color_9: #005bac;
+$background-color_10: #e4002b;
+$background-color_11: #007a33;
 
-.btn-#{$name} {
-  @include btn(16px, 100px, blue, important); // Example: class btn-important
+/* 1) Button Mixin with Interpolation */
+/* 2) Font Size List (100% to 140%) */
+/* 3) Days of the Week with @each Rule */
+/* 4) Font Weights using @for */
+/* 5) Colors for Basketball Teams in March Madness using Maps */
+/* 6) Season Glyph based on Season using @each Rule */
+.btn-important {
+	font-size: 16px;
+	width: 100px;
+	background-color: $background-color_1;
+	color: $color_1;
 }
-
-// 2) Mixin for Font Sizes (100% to 140%)
-@mixin heading-font-size($index) {
-  $sizes: 100%, 110%, 120%, 130%, 140%;
-  font-size: nth($sizes, $index);
-}
-
-// Apply mixin for h6 to h10 with different font sizes
 h6 {
-  @include heading-font-size(1);
+	font-size: 100%;
 }
-
 h7 {
-  @include heading-font-size(2);
+	font-size: 110%;
 }
-
 h8 {
-  @include heading-font-size(3);
+	font-size: 120%;
 }
-
 h9 {
-  @include heading-font-size(4);
+	font-size: 130%;
 }
-
 h10 {
-  @include heading-font-size(5);
+	font-size: 140%;
 }
-
-// 3) Generating Days of the Week with @each Rule
-$days: "Monday" #ff5733, "Tuesday" #ffbd33, "Wednesday" #33ff57, "Thursday" #33c7ff, "Friday" #9b33ff, "Saturday" #ff33d4, "Sunday" #ff5733;
-
-@each $day, $color in $days {
-  .day-#{$day} {
-    background-color: $color;
-    color: white;
-    padding: 10px;
-    margin: 5px;
-    text-align: center;
-
-    &:hover {
-      transform: scale(1.05);
-    }
-  }
+.day-Monday {
+	background-color: $background-color_2;
+	color: $color_2;
+	padding: 10px;
+	margin: 5px;
+	text-align: center;
+	&:hover {
+		transform: scale(1.05);
+	}
 }
-
-// 4) Font Weights using @for
-@for $i from 1 through 10 {
-  .font#{$i} {
-    font-weight: $i * 100;
-  }
+.day-Tuesday {
+	background-color: $background-color_3;
+	color: $color_2;
+	padding: 10px;
+	margin: 5px;
+	text-align: center;
+	&:hover {
+		transform: scale(1.05);
+	}
 }
-
-// 5) Colors for Basketball Teams in March Madness using Maps
-$basketball-teams: (
-  "Duke": #001f5d,
-  "Kentucky": #005bac,
-  "Kansas": #e4002b,
-  "North Carolina": #007a33
-);
-
-@each $team, $color in $basketball-teams {
-  .team-#{$team} {
-    background-color: $color;
-    color: white;
-    padding: 10px;
-    text-align: center;
-  }
+.day-Wednesday {
+	background-color: $background-color_4;
+	color: $color_2;
+	padding: 10px;
+	margin: 5px;
+	text-align: center;
+	&:hover {
+		transform: scale(1.05);
+	}
 }
-
-// 6) Season Glyph based on Season using @each Rule
-$seasons: ("Winter": "❄️", "Spring": "🌸", "Summer": "☀️", "Fall": "🍂");
-
-@mixin season-glyph($season) {
-  content: map-get($seasons, $season);
+.day-Thursday {
+	background-color: $background-color_5;
+	color: $color_2;
+	padding: 10px;
+	margin: 5px;
+	text-align: center;
+	&:hover {
+		transform: scale(1.05);
+	}
 }
-
-h1, h2, h3, h4, h5 {
-  @each $season, $glyph in $seasons {
-    &.#{$season} {
-      &:after {
-        @include season-glyph($season);
-        margin-left: 10px;
-      }
-    }
-  }
+.day-Friday {
+	background-color: $background-color_6;
+	color: $color_2;
+	padding: 10px;
+	margin: 5px;
+	text-align: center;
+	&:hover {
+		transform: scale(1.05);
+	}
 }
-
+.day-Saturday {
+	background-color: $background-color_7;
+	color: $color_2;
+	padding: 10px;
+	margin: 5px;
+	text-align: center;
+	&:hover {
+		transform: scale(1.05);
+	}
+}
+.day-Sunday {
+	background-color: $background-color_2;
+	color: $color_2;
+	padding: 10px;
+	margin: 5px;
+	text-align: center;
+	&:hover {
+		transform: scale(1.05);
+	}
+}
+.font1 {
+	font-weight: 100;
+}
+.font2 {
+	font-weight: 200;
+}
+.font3 {
+	font-weight: 300;
+}
+.font4 {
+	font-weight: 400;
+}
+.font5 {
+	font-weight: 500;
+}
+.font6 {
+	font-weight: 600;
+}
+.font7 {
+	font-weight: 700;
+}
+.font8 {
+	font-weight: 800;
+}
+.font9 {
+	font-weight: 900;
+}
+.font10 {
+	font-weight: 1000;
+}
+.team-Duke {
+	background-color: $background-color_8;
+	color: $color_2;
+	padding: 10px;
+	text-align: center;
+}
+.team-Kentucky {
+	background-color: $background-color_9;
+	color: $color_2;
+	padding: 10px;
+	text-align: center;
+}
+.team-Kansas {
+	background-color: $background-color_10;
+	color: $color_2;
+	padding: 10px;
+	text-align: center;
+}
+.team-NorthCarolina {
+	background-color: $background-color_11;
+	color: $color_2;
+	padding: 10px;
+	text-align: center;
+}
+h1.Winter {
+	&:after {
+		content: "❄️";
+		margin-left: 10px;
+	}
+}
+h2.Spring {
+	&:after {
+		content: "🌸";
+		margin-left: 10px;
+	}
+}
+h3.Summer {
+	&:after {
+		content: "☀️";
+		margin-left: 10px;
+	}
+}
+h4.Fall {
+	&:after {
+		content: "🍂";
+		margin-left: 10px;
+	}
+}
