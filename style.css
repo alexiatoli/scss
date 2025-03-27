@@ -1,184 +1,175 @@
-/* 1) Button Mixin with Interpolation */
-.btn-important {
-  font-size: 16px;
-  width: 100px;
-  background-color: blue;
-  color: purple;
+/* 1) Variable Definitions */
+/* Define all colors and variables at the top to avoid undefined variable errors */
+/* 2) Button Mixin with Interpolation */
+/* * This section defines the styles for the `.btn-important` class, which is styled * with a fixed font size, width, background color, and text color. The background * color is set using the `$background-color_1` variable, and the text color is set * using the `$color_1` variable. */
+ .btn-important {
+	 font-size: 16px;
+	 width: 100px;
+	 background-color: blue;
+	 color: purple;
 }
-
-/* 2) Font Size List (100% to 140%) */
-h6 {
-  font-size: 100%;
+/* 3) Font Size List (100% to 140%) */
+/* * This section defines font sizes for heading elements from `h6` to `h10`. * The font sizes are set to 100%, 110%, 120%, 130%, and 140%, respectively. */
+ h6 {
+	 font-size: 100%;
 }
-h7 {
-  font-size: 110%;
+ h7 {
+	 font-size: 110%;
 }
-h8 {
-  font-size: 120%;
+ h8 {
+	 font-size: 120%;
 }
-h9 {
-  font-size: 130%;
+ h9 {
+	 font-size: 130%;
 }
-h10 {
-  font-size: 140%;
+ h10 {
+	 font-size: 140%;
 }
-
-/* 3) Days of the Week with @each Rule */
-.day-Monday {
-  background-color: #ff5733;
-  color: white;
-  padding: 10px;
-  margin: 5px;
-  text-align: center;
+/* 4) Days of the Week with @each Rule */
+/* * This section defines the styles for the days of the week (Monday to Sunday). * Each day is assigned a unique background color from the `$background-color_2` * to `$background-color_7` variables. A hover effect is also applied, making * the day element scale when hovered. */
+ .day-Monday {
+	 background-color: #ff5733;
+	 color: white;
+	 padding: 10px;
+	 margin: 5px;
+	 text-align: center;
 }
-.day-Monday:hover {
-  transform: scale(1.05);
+ .day-Monday:hover {
+	 transform: scale(1.05);
 }
-
-.day-Tuesday {
-  background-color: #ffbd33;
-  color: white;
-  padding: 10px;
-  margin: 5px;
-  text-align: center;
+ .day-Tuesday {
+	 background-color: #ffbd33;
+	 color: white;
+	 padding: 10px;
+	 margin: 5px;
+	 text-align: center;
 }
-.day-Tuesday:hover {
-  transform: scale(1.05);
+ .day-Tuesday:hover {
+	 transform: scale(1.05);
 }
-
-.day-Wednesday {
-  background-color: #33ff57;
-  color: white;
-  padding: 10px;
-  margin: 5px;
-  text-align: center;
+ .day-Wednesday {
+	 background-color: #33ff57;
+	 color: white;
+	 padding: 10px;
+	 margin: 5px;
+	 text-align: center;
 }
-.day-Wednesday:hover {
-  transform: scale(1.05);
+ .day-Wednesday:hover {
+	 transform: scale(1.05);
 }
-
-.day-Thursday {
-  background-color: #33c7ff;
-  color: white;
-  padding: 10px;
-  margin: 5px;
-  text-align: center;
+ .day-Thursday {
+	 background-color: #33c7ff;
+	 color: white;
+	 padding: 10px;
+	 margin: 5px;
+	 text-align: center;
 }
-.day-Thursday:hover {
-  transform: scale(1.05);
+ .day-Thursday:hover {
+	 transform: scale(1.05);
 }
-
-.day-Friday {
-  background-color: #9b33ff;
-  color: white;
-  padding: 10px;
-  margin: 5px;
-  text-align: center;
+ .day-Friday {
+	 background-color: #9b33ff;
+	 color: white;
+	 padding: 10px;
+	 margin: 5px;
+	 text-align: center;
 }
-.day-Friday:hover {
-  transform: scale(1.05);
+ .day-Friday:hover {
+	 transform: scale(1.05);
 }
-
-.day-Saturday {
-  background-color: #ff33d4;
-  color: white;
-  padding: 10px;
-  margin: 5px;
-  text-align: center;
+ .day-Saturday {
+	 background-color: #ff33d4;
+	 color: white;
+	 padding: 10px;
+	 margin: 5px;
+	 text-align: center;
 }
-.day-Saturday:hover {
-  transform: scale(1.05);
+ .day-Saturday:hover {
+	 transform: scale(1.05);
 }
-
-.day-Sunday {
-  background-color: #ff5733;
-  color: white;
-  padding: 10px;
-  margin: 5px;
-  text-align: center;
+ .day-Sunday {
+	 background-color: #ff5733;
+	 color: white;
+	 padding: 10px;
+	 margin: 5px;
+	 text-align: center;
 }
-.day-Sunday:hover {
-  transform: scale(1.05);
+ .day-Sunday:hover {
+	 transform: scale(1.05);
 }
-
-/* 4) Font Weights using @for */
-.font1 {
-  font-weight: 100;
+/* 5) Font Weights using @for */
+/* * This section defines font weights for `.font1` to `.font10`. The font weight * is progressively increased from 100 to 1000. */
+ .font1 {
+	 font-weight: 100;
 }
-.font2 {
-  font-weight: 200;
+ .font2 {
+	 font-weight: 200;
 }
-.font3 {
-  font-weight: 300;
+ .font3 {
+	 font-weight: 300;
 }
-.font4 {
-  font-weight: 400;
+ .font4 {
+	 font-weight: 400;
 }
-.font5 {
-  font-weight: 500;
+ .font5 {
+	 font-weight: 500;
 }
-.font6 {
-  font-weight: 600;
+ .font6 {
+	 font-weight: 600;
 }
-.font7 {
-  font-weight: 700;
+ .font7 {
+	 font-weight: 700;
 }
-.font8 {
-  font-weight: 800;
+ .font8 {
+	 font-weight: 800;
 }
-.font9 {
-  font-weight: 900;
+ .font9 {
+	 font-weight: 900;
 }
-.font10 {
-  font-weight: 1000;
+ .font10 {
+	 font-weight: 1000;
 }
-
-/* 5) Colors for Basketball Teams in March Madness using Maps */
-.team-Duke {
-  background-color: #001f5d;
-  color: white;
-  padding: 10px;
-  text-align: center;
+/* 6) Colors for Basketball Teams in March Madness using Maps */
+/* * This section defines styles for the top 4 basketball teams in March Madness: * Duke, Kentucky, Kansas, and North Carolina. The background colors for each * team are set using pre-defined variables, and text is centered with padding. */
+ .team-Duke {
+	 background-color: #001f5d;
+	 color: white;
+	 padding: 10px;
+	 text-align: center;
 }
-
-.team-Kentucky {
-  background-color: #005bac;
-  color: white;
-  padding: 10px;
-  text-align: center;
+ .team-Kentucky {
+	 background-color: #005bac;
+	 color: white;
+	 padding: 10px;
+	 text-align: center;
 }
-
-.team-Kansas {
-  background-color: #e4002b;
-  color: white;
-  padding: 10px;
-  text-align: center;
+ .team-Kansas {
+	 background-color: #e4002b;
+	 color: white;
+	 padding: 10px;
+	 text-align: center;
 }
-
-.team-NorthCarolina {
-  background-color: #007a33;
-  color: white;
-  padding: 10px;
-  text-align: center;
+ .team-NorthCarolina {
+	 background-color: #007a33;
+	 color: white;
+	 padding: 10px;
+	 text-align: center;
 }
-
-/* 6) Season Glyph based on Season using @each Rule */
-h1.Winter:after {
-  content: "❄️";
-  margin-left: 10px;
+/* 7) Season Glyph based on Season using @each Rule */
+/* * This section adds season-specific emojis (Winter, Spring, Summer, and Fall) * to headings (h1 to h4) using the `&:after` pseudo-element. A corresponding * emoji is appended to each season's heading. */
+ h1.Winter:after {
+	 content: "❄️";
+	 margin-left: 10px;
 }
-
-h2.Spring:after {
-  content: "🌸";
-  margin-left: 10px;
+ h2.Spring:after {
+	 content: "🌸";
+	 margin-left: 10px;
 }
-
-h3.Summer:after {
-  content: "☀️";
-  margin-left: 10px;
+ h3.Summer:after {
+	 content: "☀️";
+	 margin-left: 10px;
 }
-
-h4.Fall:after {
-  content: "🍂";
-  margin-left: 10px;
+ h4.Fall:after {
+	 content: "🍂";
+	 margin-left: 10px;
 }
