@@ -1,0 +1,100 @@
+// 1) Button Mixin with Interpolation
+// This mixin generates a button with passed parameters for font size, width, background color, and name.
+// It uses interpolation to generate the class name dynamically based on the passed "name" parameter.
+@mixin btn($font-size, $width, $bg-color, $name) {
+  font-size: $font-size;
+  width: $width;
+  background-color: $bg-color;
+  color: purple;
+}
+
+.btn-#{$name} {
+  @include btn(16px, 100px, blue, important); // Example: class btn-important
+}
+
+// 2) Mixin for Font Sizes (100% to 140%)
+@mixin heading-font-size($index) {
+  $sizes: 100%, 110%, 120%, 130%, 140%;
+  font-size: nth($sizes, $index);
+}
+
+// Apply mixin for h6 to h10 with different font sizes
+h6 {
+  @include heading-font-size(1);
+}
+
+h7 {
+  @include heading-font-size(2);
+}
+
+h8 {
+  @include heading-font-size(3);
+}
+
+h9 {
+  @include heading-font-size(4);
+}
+
+h10 {
+  @include heading-font-size(5);
+}
+
+// 3) Generating Days of the Week with @each Rule
+$days: "Monday" #ff5733, "Tuesday" #ffbd33, "Wednesday" #33ff57, "Thursday" #33c7ff, "Friday" #9b33ff, "Saturday" #ff33d4, "Sunday" #ff5733;
+
+@each $day, $color in $days {
+  .day-#{$day} {
+    background-color: $color;
+    color: white;
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+// 4) Font Weights using @for
+@for $i from 1 through 10 {
+  .font#{$i} {
+    font-weight: $i * 100;
+  }
+}
+
+// 5) Colors for Basketball Teams in March Madness using Maps
+$basketball-teams: (
+  "Duke": #001f5d,
+  "Kentucky": #005bac,
+  "Kansas": #e4002b,
+  "North Carolina": #007a33
+);
+
+@each $team, $color in $basketball-teams {
+  .team-#{$team} {
+    background-color: $color;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+}
+
+// 6) Season Glyph based on Season using @each Rule
+$seasons: ("Winter": "❄️", "Spring": "🌸", "Summer": "☀️", "Fall": "🍂");
+
+@mixin season-glyph($season) {
+  content: map-get($seasons, $season);
+}
+
+h1, h2, h3, h4, h5 {
+  @each $season, $glyph in $seasons {
+    &.#{$season} {
+      &:after {
+        @include season-glyph($season);
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
