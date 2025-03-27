@@ -1,4 +1,21 @@
-/* 1) Button Mixin with Interpolation */
+/* 1) Variable Definitions */
+/* Define all colors and variables at the top to avoid undefined variable errors */
+
+$color_1: purple;
+$color_2: white;
+$background-color_1: blue;
+$background-color_2: #ff5733;
+$background-color_3: #ffbd33;
+$background-color_4: #33ff57;
+$background-color_5: #33c7ff;
+$background-color_6: #9b33ff;
+$background-color_7: #ff33d4;
+$background-color_8: #001f5d;
+$background-color_9: #005bac;
+$background-color_10: #e4002b;
+$background-color_11: #007a33;
+
+/* 2) Button Mixin with Interpolation */
 /* 
  * This section defines the styles for the `.btn-important` class, which is styled
  * with a fixed font size, width, background color, and text color. The background
@@ -12,7 +29,7 @@
   color: $color_1;
 }
 
-/* 2) Font Size List (100% to 140%) */
+/* 3) Font Size List (100% to 140%) */
 /* 
  * This section defines font sizes for heading elements from `h6` to `h10`.
  * The font sizes are set to 100%, 110%, 120%, 130%, and 140%, respectively.
@@ -33,7 +50,7 @@ h10 {
   font-size: 140%;
 }
 
-/* 3) Days of the Week with @each Rule */
+/* 4) Days of the Week with @each Rule */
 /* 
  * This section defines the styles for the days of the week (Monday to Sunday).
  * Each day is assigned a unique background color from the `$background-color_2` 
@@ -111,7 +128,7 @@ h10 {
   }
 }
 
-/* 4) Font Weights using @for */
+/* 5) Font Weights using @for */
 /* 
  * This section defines font weights for `.font1` to `.font10`. The font weight 
  * is progressively increased from 100 to 1000.
@@ -147,7 +164,7 @@ h10 {
   font-weight: 1000;
 }
 
-/* 5) Colors for Basketball Teams in March Madness using Maps */
+/* 6) Colors for Basketball Teams in March Madness using Maps */
 /* 
  * This section defines styles for the top 4 basketball teams in March Madness:
  * Duke, Kentucky, Kansas, and North Carolina. The background colors for each
@@ -178,7 +195,7 @@ h10 {
   text-align: center;
 }
 
-/* 6) Season Glyph based on Season using @each Rule */
+/* 7) Season Glyph based on Season using @each Rule */
 /* 
  * This section adds season-specific emojis (Winter, Spring, Summer, and Fall)
  * to headings (h1 to h4) using the `&:after` pseudo-element. A corresponding
@@ -208,3 +225,4 @@ h4.Fall {
     margin-left: 10px;
   }
 }
+
